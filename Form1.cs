@@ -30,17 +30,7 @@ namespace WindowsFormsApplication3
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (player.Left + player.Width > block1.Left && player.Left + player.Width < block1.Left + block1.Width + player.Width && player.Top - block1.Bottom <= 10 && player.Top - block1.Top > -10)
-            {
-                block1.Image = Image.FromFile("Mush.bmp");
-                Force = -1;
-            }
-            if (player.Left + player.Width > block1.Left && player.Left + player.Width < block1.Left + block1.Width + player.Width && player.Top + player.Height >= block1.Top && player.Top < block1.Top)
-            {
-                player.Height = (72);
-
-                player.Image = Image.FromFile("Large.bmp");
-            }
+            
             // Side Collision
             if (player.Right > block.Left && player.Left < block.Right - player.Width  && player.Bottom < block.Bottom && player.Bottom > block.Top )
             {
